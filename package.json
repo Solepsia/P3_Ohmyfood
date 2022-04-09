@@ -1,0 +1,11 @@
+{
+  "name": "p3_ohmyfood_rota_lola",
+  "version": "1.0.0",
+  "description": "P3_ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./puplic/css/style.css"
+  },
+  "author": "Lola ROTA",
+  "license": "ISC"
+}
