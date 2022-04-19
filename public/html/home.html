@@ -4,6 +4,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
         <link rel="stylesheet" href="../css/style.css">
         <title>Ohmyfood! - Accueil</title>
     </head>
@@ -11,8 +15,7 @@
     <body>
 
         <header>
-            <!-- icône flèche retour qui sera display none sur le home-->
-            <!-- logo Ohmyfood! -->
+            <div class="logo">ohmyfood</div>
         </header>
 
         <section>
@@ -24,57 +27,69 @@
             </div>
         </section>
 
-        <section>
-            <div>Fonctionnement</div>
-            <div>(1) [icône mobile] Choisissez un restaurant</div>
-            <div>(2) [icône menu] Composez votre menu</div>
-            <div>(3) [icône stand] Dégustez au restaurant</div>
-        </section>
-
-        <section>
-            <div>Restaurants</div>
-            <div>
-                <!-- image La Palette du Goût -->
-                <div>Nouveau</div>
-                <div>
-                    <div>La palette du goût</div>
-                    <div>Ménilmontant</div>
-                    <!-- icône coeur cliquable-rosifiable -->
-                </div>
+        <section class="fonctionnement">
+            <div class="fonctionnement fonctionnement__titre">Fonctionnement</div>
+            <div class="etape">
+                <div class="etape etape__numero">1</div>
+                <div class="etape etape__icone"><i class="fas fa-mobile"></i></div>
+                <div class="etape etape__action">Choisissez un restaurant</div>
             </div>
-            <div>
-                <!-- image La note enchantée -->
-                <div>Nouveau</div>
-                <div>
-                    <div>La note enchantée</div>
-                    <div>Charonne</div>
-                    <!-- icône coeur cliquable-rosifiable -->
-                </div>
+            <div class="etape">
+                <div class="etape etape__numero">2</div>
+                <div class="etape etape__icone"><i class="fas fa-list"></i></div>
+                <div class="etape etape__action">Composez votre menu</div>
             </div>
-            <div>
-                <!-- image À la française -->
-                <div>
-                    <div>À la française</div>
-                    <div>Cité Rouge</div>
-                    <!-- icône coeur cliquable-rosifiable -->
-                </div>
-            </div>
-            <div>
-                <!-- image Le délice des sens -->
-                <div>
-                    <div>Le délice des sens</div>
-                    <div>Folie-Méricourt</div>
-                    <!-- icône coeur cliquable-rosifiable -->
-                </div>
+            <div class="etape">
+                <div class="etape etape__numero">3</div>
+                <div class="etape etape__icone"><i class="fas fa-store"></i></div>
+                <div class="etape etape__action">Dégustez au restaurant</div>
             </div>
         </section>
 
-        <footer>
-            <!-- logo Ohmyfood! petit blanc -->
-            <div>[icône couverts] Proposer un restaurant</div>
-            <div>[icône handshake] Devenir partenaire</div>
-            <div>Mentions légales</div>
-            <div>Contact</div>
+        <section class="restaurants">
+            <div class="restaurants restaurants__titre">Restaurants</div>
+            <a href="../html/menu-palette_gout.html" class="restaurant"><div>
+                <img src="../img/restaurants/palette_gout.jpg" alt="restaurant_palette_gout" class="restaurant__img" />
+                <div>Nouveau</div>
+                <div class="restaurant restaurant__info">
+                    <div class="restaurant restaurant__info restaurant__info__nom">La palette du goût</div>
+                    <div class="restaurant restaurant__info restaurant__info__lieu">Ménilmontant</div>
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div></a>
+            <a href="../html/menu-note_enchantee.html" class="restaurant"><div>
+                <img src="../img/restaurants/note_enchantee.jpg" alt="restaurant_note_enchantee" class="restaurant__img" />
+                <div>Nouveau</div>
+                <div class="restaurant restaurant__info">
+                    <div class="restaurant restaurant__info restaurant__info__nom">La note enchantée</div>
+                    <div class="restaurant restaurant__info restaurant__info__lieu">Charonne</div>
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div></a>
+            <a href="../html/menu-francaise.html" class="restaurant"><div>
+                <img src="../img/restaurants/a_la_francaise.jpg" alt="restaurant_a_la_francaise" class="restaurant__img" />
+                <div class="restaurant restaurant__info">
+                    <div class="restaurant restaurant__info restaurant__info__nom">À la française</div>
+                    <div class="restaurant restaurant__info restaurant__info__lieu">Cité Rouge</div>
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div></a>
+            <a href="../html/menu-delice_sens.html" class="restaurant"><div>
+                <img src="../img/restaurants/delice_sens.jpg" alt="restaurant_delice_sens" class="restaurant__img" />
+                <div class="restaurant restaurant__info">
+                    <div class="restaurant restaurant__info restaurant__info__nom">Le délice des sens</div>
+                    <div class="restaurant restaurant__info restaurant__info__lieu">Folie-Méricourt</div>
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div></a>
+        </section>
+
+        <footer class="bottom">
+            <div class="bottom bottom__elem logo logo--blanc">ohmyfood</div>
+            <div class="bottom bottom__elem"><i class="fas fa-utensils"></i> Proposer un restaurant</div>
+            <div class="bottom bottom__elem"><i class="fas fa-handshake-angle"></i> Devenir partenaire</div>
+            <div class="bottom bottom__elem">Mentions légales</div>
+            <div class="bottom bottom__elem">Contact</div>
         </footer>
 
     </body>
