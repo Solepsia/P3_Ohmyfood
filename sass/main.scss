@@ -1,6 +1,9 @@
 $primaire: #9356DC;
 $secondaire: #FF79DA;
 $tertiaire: #99E2D0;
+$bg-gray: #f2f2f2;
+$light-shadow: #c2c2c2;
+$dark-shadow: #a2a2a2;
 
 * {
     box-sizing: border-box;
@@ -32,7 +35,7 @@ a {
 
 header {
     padding: 10px;
-    box-shadow: 0px 2px 2px #a2a2a2;
+    box-shadow: 0px 5px 5px $dark-shadow;
     justify-content: center;
     .logo {
         font-size: 150%;
@@ -40,10 +43,21 @@ header {
     }
 }
 
+.btn {
+    height: 50px;
+    border-radius: 25px;
+    color: white;
+    background: linear-gradient(135deg, $secondaire, $primaire);
+    padding: 15px 30px;
+    font-size: 90%;
+    font-weight: 500;
+    margin: 30px 0px;
+}
+
 #top {
-    background-color: #f2f2f2;
+    background-color: $bg-gray;
     .search {
-        background-color: #c2c2c2;
+        background-color: $light-shadow;
     }
     .pres {
         justify-content: center;
@@ -61,25 +75,94 @@ header {
     }
 }
 
-#places {
-    background-color: #f2f2f2;
+.howto {
+    flex-direction: column;
+    padding: 20px;
+    &__title {
+        margin: 20px 0px;
+        font-size: 150%;
+        font-weight: 700;
+    }
+    .step {
+        background-color: $bg-gray;
+        padding: 20px;
+        border-radius: 20px;
+        margin: 10px;
+        box-shadow: 5px 5px 5px $light-shadow;
+        font-size: 90%;
+        &__number {
+            margin: 0px 0px 0px -23px;
+            background-color: $primaire;
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 500;
+        }
+        &__icon {
+            margin: 0px 0px 0px 20px;
+            color: #808080;
+            font-size: 100%;
+        }
+        &__action {
+            margin: 0px 0px 0px 20px;
+            font-weight: 500;
+        }
+        &--colored {
+            background-color: lighten($primaire, 35%);
+            .step__icon {
+                color: $primaire;
+            }
+        }
+    }
+}
+
+.places {
+    background-color: $bg-gray;
+    flex-direction: column;
+    padding: 20px;
+    &__title {
+        margin: 20px 0px;
+        font-size: 150%;
+        font-weight: 700;
+    }
     .restaurant {
         display: block;
         border-radius: 20px;
         background-color: white;
-        box-shadow: 5px 5px 5px #c2c2c2;
-        width: 90%;
-        height: 200px;
+        box-shadow: 5px 5px 5px $light-shadow;
         overflow: hidden;
-        margin: 9px;
+        margin: 10px 0px;
         flex-direction: column;
         &__img {
             justify-content: center;
             align-items: center;
             object-fit: cover;
             border-radius: 18px 18px 0px 0px;
-            height: 100px;
+            height: 150px;
             width: 100%;
         }
+        &__info {
+            flex-direction: column;
+            padding: 15px;
+            &__name {
+                font-weight: 700;
+                margin-bottom: 5px;
+            }
+            &__loc {
+                font-weight: 300;
+            }
+        }
+    }
+    .new {
+        font-size: 80%;
+        font-weight: 500;
+        background-color: $tertiaire;
+        color: darken($tertiaire, 40%);
+        padding: 5px 10px;
+        border-radius: 3px;
+        position: absolute;
+        margin: 9px 0px 0px 9px;
     }
 }

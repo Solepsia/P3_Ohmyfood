@@ -28,12 +28,23 @@ a {
 
 header {
   padding: 10px;
-  box-shadow: 0px 2px 2px #a2a2a2;
+  box-shadow: 0px 5px 5px #a2a2a2;
   justify-content: center;
 }
 header .logo {
   font-size: 150%;
   text-align: center;
+}
+
+.btn {
+  height: 50px;
+  border-radius: 25px;
+  color: white;
+  background: linear-gradient(135deg, #FF79DA, #9356DC);
+  padding: 15px 30px;
+  font-size: 90%;
+  font-weight: 500;
+  margin: 30px 0px;
 }
 
 #top {
@@ -57,27 +68,97 @@ header .logo {
   font-weight: 300;
 }
 
-#places {
-  background-color: #f2f2f2;
+.howto {
+  flex-direction: column;
+  padding: 20px;
 }
-#places .restaurant {
+.howto__title {
+  margin: 20px 0px;
+  font-size: 150%;
+  font-weight: 700;
+}
+.howto .step {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 10px;
+  box-shadow: 5px 5px 5px #c2c2c2;
+  font-size: 90%;
+}
+.howto .step__number {
+  margin: 0px 0px 0px -23px;
+  background-color: #9356DC;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+}
+.howto .step__icon {
+  margin: 0px 0px 0px 20px;
+  color: #808080;
+  font-size: 100%;
+}
+.howto .step__action {
+  margin: 0px 0px 0px 20px;
+  font-weight: 500;
+}
+.howto .step--colored {
+  background-color: #f2eafb;
+}
+.howto .step--colored .step__icon {
+  color: #9356DC;
+}
+
+.places {
+  background-color: #f2f2f2;
+  flex-direction: column;
+  padding: 20px;
+}
+.places__title {
+  margin: 20px 0px;
+  font-size: 150%;
+  font-weight: 700;
+}
+.places .restaurant {
   display: block;
   border-radius: 20px;
   background-color: white;
   box-shadow: 5px 5px 5px #c2c2c2;
-  width: 90%;
-  height: 200px;
+  /*height: 200px;*/
   overflow: hidden;
-  margin: 9px;
+  margin: 10px 0px;
   flex-direction: column;
 }
-#places .restaurant__img {
+.places .restaurant__img {
   justify-content: center;
   align-items: center;
   object-fit: cover;
   border-radius: 18px 18px 0px 0px;
-  height: 100px;
+  height: 150px;
   width: 100%;
+}
+.places .restaurant__info {
+  flex-direction: column;
+  padding: 15px;
+}
+.places .restaurant__info__name {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.places .restaurant__info__loc {
+  font-weight: 300;
+}
+.places .new {
+  font-size: 80%;
+  font-weight: 500;
+  background-color: #99E2D0;
+  color: #278870;
+  padding: 5px 10px;
+  border-radius: 3px;
+  position: absolute;
+  margin: 9px 0px 0px 9px;
 }
 
 /*# sourceMappingURL=style.css.map */
