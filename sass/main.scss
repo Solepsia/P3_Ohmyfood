@@ -37,9 +37,18 @@ header {
     padding: 10px;
     box-shadow: 0px 5px 5px $dark-shadow;
     justify-content: center;
+    height: 52px;
     .logo {
         font-size: 150%;
         text-align: center;
+    }
+    .home {
+        display: block;
+        justify-content: center;
+        position: absolute;
+        left: 15px;
+        top: 12px;
+        font-size: 150%;
     }
 }
 
@@ -54,10 +63,37 @@ header {
     margin: 30px 0px;
 }
 
+.fa-heart {
+    display: block;
+    position: absolute;
+    right: 10%;
+    bottom: 15%;
+    z-index: 2;
+    font-size: 150%;
+    cursor: pointer;
+
+}
+
 #top {
     background-color: $bg-gray;
     .search {
+        width: 100%;
         background-color: $light-shadow;
+        justify-content: center;
+        .fas {
+            display: block;
+            padding: 10px;
+        }
+        form {
+            width: 30%;
+        }
+        input {
+            background-color: $light-shadow;
+            border: none;
+            font-family: Roboto;
+            font-weight: 500;
+            color: black;
+        }
     }
     .pres {
         justify-content: center;
@@ -98,6 +134,8 @@ header {
             height: 20px;
             border-radius: 10px;
             text-align: center;
+            justify-content: center;
+            padding: 1px 0px 0px 0px;
             font-weight: 500;
         }
         &__icon {
@@ -127,6 +165,19 @@ header {
         font-size: 150%;
         font-weight: 700;
     }
+    &__card {
+        position: relative;
+        z-index: 1;
+        .fas {
+            opacity: 0;
+            background: linear-gradient(45deg, $secondaire, $primaire);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .far {
+            opacity: 1;
+        }
+    }
     .restaurant {
         display: block;
         border-radius: 20px;
@@ -135,6 +186,7 @@ header {
         overflow: hidden;
         margin: 10px 0px;
         flex-direction: column;
+        width: 100%;
         &__img {
             justify-content: center;
             align-items: center;
@@ -163,6 +215,24 @@ header {
         padding: 5px 10px;
         border-radius: 3px;
         position: absolute;
-        margin: 9px 0px 0px 9px;
+        right: 10px;
+        top: 20px;
+    }
+}
+
+.footer {
+    background-color: #505050;
+    color: white;
+    padding: 0px 30px 30px 30px;
+    flex-direction: column;
+    .logo {
+        margin: 20px 0px 10px 0px;
+    }
+    &__elem {
+        margin: 2px 0px;
+        .fas {
+            display: inline-block;
+            width: 25px;
+        }
     }
 }
