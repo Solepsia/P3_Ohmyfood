@@ -5,6 +5,18 @@ $bg-gray: #f2f2f2;
 $light-shadow: #c2c2c2;
 $dark-shadow: #a2a2a2;
 
+@mixin heart-style {
+    .fas {
+        opacity: 1;
+        background: linear-gradient(45deg, $secondaire, $primaire);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .far {
+        opacity: 0;
+    }
+}
+
 * {
     box-sizing: border-box;
     font-family: Roboto;
@@ -66,12 +78,9 @@ header {
 .fa-heart {
     display: block;
     position: absolute;
-    right: 10%;
-    bottom: 15%;
     z-index: 2;
     font-size: 150%;
     cursor: pointer;
-
 }
 
 #top {
@@ -86,6 +95,9 @@ header {
         }
         form {
             width: 30%;
+        }
+        ::placeholder {
+            color: black;
         }
         input {
             background-color: $light-shadow;
@@ -168,15 +180,11 @@ header {
     &__card {
         position: relative;
         z-index: 1;
-        .fas {
-            opacity: 0;
-            background: linear-gradient(45deg, $secondaire, $primaire);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .fa-heart {
+            right: 10%;
+            bottom: 15%;
         }
-        .far {
-            opacity: 1;
-        }
+        @include heart-style;
     }
     .restaurant {
         display: block;
@@ -217,6 +225,87 @@ header {
         position: absolute;
         right: 10px;
         top: 20px;
+    }
+}
+
+.menu__img {
+    width: 100vw;
+}
+
+.menu {
+    border-radius: 40px 40px 0px 0px;
+    background-color: $bg-gray;
+    padding: 30px 15px;
+    margin: -50px 0px 0px 0px;
+    &__title {
+        font-size: 150%;
+        width: 100%;
+        position: relative;
+        .fa-heart {
+            font-size: 100%;
+            right: 10%;
+            top: 10%;
+        }
+        @include heart-style;
+    }
+    &__section {
+        margin: 20px 0px;
+        flex-direction: column;
+        &__title {
+            font-weight: 300;
+            &__underline {
+                width: 50px;
+                border: $tertiaire solid 2px;
+                margin: 5px 0px;
+            }
+        }
+    }
+    &__btn {
+        margin: 30px auto;
+        padding: 15px 45px;
+    }
+    .course {
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 0 10px $light-shadow;
+        padding: 10px;
+        margin: 5px 0px;
+        position: relative;
+        height: 60px;
+        &__title {
+            width: calc(100% - 100px);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        &__sub {
+            font-size: 90%;
+            font-weight: 300;
+            white-space: nowrap;
+            overflow: hidden;
+            margin-top: 5px;
+            width: calc(100% - 100px);
+            text-overflow: ellipsis;
+        }
+        &__price {
+            position: absolute;
+            right: calc(5% + 60px);
+            bottom: 10%;
+            font-size: 90%;
+        }
+        &__selected {
+            position: absolute;
+            height: 60px;
+            width: 60px;
+            font-size: 130%;
+            justify-content: center;
+            align-items: center;
+            background-color: $tertiaire;
+            color: white;
+            bottom: 0px;
+            right: 0px;
+            border-radius: 0px 15px 15px 0px;
+        }
     }
 }
 

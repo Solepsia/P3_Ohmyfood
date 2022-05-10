@@ -59,8 +59,6 @@ header .home {
 .fa-heart {
   display: block;
   position: absolute;
-  right: 10%;
-  bottom: 15%;
   z-index: 2;
   font-size: 150%;
   cursor: pointer;
@@ -80,6 +78,9 @@ header .home {
 }
 #top .search form {
   width: 30%;
+}
+#top .search ::placeholder {
+  color: black;
 }
 #top .search input {
   background-color: #c2c2c2;
@@ -162,14 +163,18 @@ header .home {
   position: relative;
   z-index: 1;
 }
+.places__card .fa-heart {
+  right: 10%;
+  bottom: 15%;
+}
 .places__card .fas {
-  opacity: 0;
+  opacity: 1;
   background: linear-gradient(45deg, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .places__card .far {
-  opacity: 1;
+  opacity: 0;
 }
 .places .restaurant {
   display: block;
@@ -210,6 +215,95 @@ header .home {
   position: absolute;
   right: 10px;
   top: 20px;
+}
+
+.menu__img {
+  width: 100vw;
+}
+
+.menu {
+  border-radius: 40px 40px 0px 0px;
+  background-color: #f2f2f2;
+  padding: 30px 15px;
+  margin: -50px 0px 0px 0px;
+}
+.menu__title {
+  font-size: 150%;
+  width: 100%;
+  position: relative;
+}
+.menu__title .fa-heart {
+  font-size: 100%;
+  right: 10%;
+  top: 10%;
+}
+.menu__title .fas {
+  opacity: 1;
+  background: linear-gradient(45deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu__title .far {
+  opacity: 0;
+}
+.menu__section {
+  margin: 20px 0px;
+  flex-direction: column;
+}
+.menu__section__title {
+  font-weight: 300;
+}
+.menu__section__title__underline {
+  width: 50px;
+  border: #99E2D0 solid 2px;
+  margin: 5px 0px;
+}
+.menu__btn {
+  margin: 30px auto;
+  padding: 15px 45px;
+}
+.menu .course {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #c2c2c2;
+  padding: 10px;
+  margin: 5px 0px;
+  position: relative;
+  height: 60px;
+}
+.menu .course__title {
+  width: calc(100% - 100px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu .course__sub {
+  font-size: 90%;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: 5px;
+  width: calc(100% - 100px);
+  text-overflow: ellipsis;
+}
+.menu .course__price {
+  position: absolute;
+  right: calc(5% + 60px);
+  bottom: 10%;
+  font-size: 90%;
+}
+.menu .course__selected {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  font-size: 130%;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  color: white;
+  bottom: 0px;
+  right: 0px;
+  border-radius: 0px 15px 15px 0px;
 }
 
 .footer {
