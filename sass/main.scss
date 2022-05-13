@@ -25,6 +25,15 @@ $dark-shadow: #a2a2a2;
     }
 }
 
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+     }
+}
+
 * {
     box-sizing: border-box;
     font-family: Roboto;
@@ -55,6 +64,17 @@ a {
 
 .logo, .menu__title {
     font-family: Shrikhand;
+}
+
+.loading-spinner {
+    background: $tertiaire;
+    color: white;
+    font-size: 300%;
+    height: 100vw;
+    opacity: 0;
+    width: 100%;
+    z-index: 3;
+    animation: 1s ease-in fade-out 1s;
 }
 
 header {
@@ -254,6 +274,8 @@ header {
 
 .menu__img {
     width: 100%;
+    max-height: 300px;
+    object-fit: cover;
 }
 
 .menu {
@@ -298,11 +320,12 @@ header {
         position: relative;
         height: 60px;
         &__title {
-            width: calc(100% - 100px);
+            width: calc(100% - 40px);
             display: block;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            transition: width 0.25s ease-out;
         }
         &__sub {
             font-size: 90%;
@@ -311,20 +334,30 @@ header {
             white-space: nowrap;
             overflow: hidden;
             margin-top: 5px;
-            width: calc(100% - 100px);
+            width: calc(100% - 40px);
             text-overflow: ellipsis;
+            transition: width 0.25s ease-out;
+        }
+        &:hover > .course__title, &:hover > .course__sub {
+            width: calc(100% - 100px)
         }
         &__price {
             position: absolute;
-            right: calc(5% + 60px);
+            right: 5%;
+            margin-right: 0px;
             bottom: 10%;
             font-size: 90%;
+            transition: margin-right 0.25s ease-out;
+        }
+        &:hover > .course__price {
+            margin-right: 60px;
         }
         &__selected {
             position: absolute;
             height: 60px;
-            width: 60px;
+            width: 0px;
             font-size: 130%;
+            overflow: hidden;
             justify-content: center;
             align-items: center;
             background-color: $tertiaire;
@@ -332,6 +365,16 @@ header {
             bottom: 0px;
             right: 0px;
             border-radius: 0px 15px 15px 0px;
+            transition: width 0.25s ease-out;
+            .fa-circle-check {
+                transition: transform 0.25s ease-out;
+            }
+        }
+        &:hover > .course__selected {
+            width: 60px;
+            & > .fa-circle-check {
+                transform: rotate(360deg);
+            }
         }
     }
 }
