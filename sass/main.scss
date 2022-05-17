@@ -25,13 +25,17 @@ $dark-shadow: #a2a2a2;
     }
 }
 
-@keyframes fade-out {
+@keyframes course-loading {
     0% {
+        opacity: 0;
+        margin-top: 40px;
+    }
+    50% {
         opacity: 1;
     }
     100% {
-        opacity: 0;
-     }
+        margin-top: 20px;
+    }
 }
 
 * {
@@ -298,6 +302,13 @@ header {
     &__section {
         margin: 20px 0px;
         flex-direction: column;
+        animation: course-loading 1s;
+        &:nth-of-type(2) {
+            animation-delay: 0.3s;
+        }
+        &:nth-of-type(3) {
+            animation-delay: 0.6s;
+        }
         &__title {
             font-weight: 300;
             &__underline {
