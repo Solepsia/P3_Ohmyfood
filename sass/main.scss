@@ -28,13 +28,35 @@ $dark-shadow: #a2a2a2;
 @keyframes course-loading {
     0% {
         opacity: 0;
-        margin-top: 40px;
+        transform: translateY(25px)
     }
     50% {
-        opacity: 1;
+        opacity: 0.99;
     }
     100% {
-        margin-top: 20px;
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes home-loading-background {
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.99;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes home-loading-spinner {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(720deg);
     }
 }
 
@@ -74,11 +96,18 @@ a {
     background: $tertiaire;
     color: white;
     font-size: 300%;
-    height: 100vw;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     opacity: 0;
     width: 100%;
-    z-index: 3;
-    animation: 1s ease-in fade-out 1s;
+    max-width: 460px;
+    z-index: 1651541;
+    position: absolute;
+    animation: home-loading-background 2.5s;
+    .fa-spinner {
+        animation: home-loading-spinner 2.5s;
+    }
 }
 
 header {
@@ -116,8 +145,8 @@ header {
     transition-timing-function: ease-in-out;
     cursor: pointer;
     &:hover {
-        box-shadow: 0 5px 6px $dark-shadow;
-        opacity: 0.9;
+        box-shadow: 0 5px 6px darken($dark-shadow, 20%);
+        opacity: 0.8;
     }
 }
 
@@ -302,18 +331,21 @@ header {
     &__section {
         margin: 20px 0px;
         flex-direction: column;
-        animation: course-loading 1s;
-        &:nth-of-type(2) {
-            animation-delay: 0.3s;
-        }
+        animation: course-loading 2.5s;
+        animation-fill-mode: both;
+        opacity: 0;
         &:nth-of-type(3) {
-            animation-delay: 0.6s;
+            animation-delay: 1s;
+        }
+        &:nth-of-type(4) {
+            animation-delay: 2s;
         }
         &__title {
             font-weight: 300;
             &__underline {
                 width: 50px;
                 border: $tertiaire solid 2px;
+                background-color: $tertiaire;
                 margin: 5px 0px;
             }
         }
