@@ -42,12 +42,16 @@ $dark-shadow: #a2a2a2;
 @keyframes home-loading-background {
     0% {
         opacity: 1;
+        visibility: visible;
     }
     80% {
         opacity: 0.99;
+        visibility: visible;
     }
     100% {
         opacity: 0;
+        visibility: hidden;
+        z-index: -1;
     }
 }
 
@@ -99,12 +103,12 @@ a {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    opacity: 0;
     width: 100%;
     max-width: 460px;
     z-index: 1651541;
-    position: absolute;
+    position: fixed;
     animation: home-loading-background 2.5s;
+    animation-fill-mode: both;
     .fa-spinner {
         animation: home-loading-spinner 2.5s;
     }
