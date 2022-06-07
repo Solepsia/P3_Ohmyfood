@@ -70,11 +70,7 @@ $dark-shadow: #a2a2a2;
 }
 
 body {
-    /*max-width: 768px;*/
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin: 0px;
 }
 
 header, div, section, footer, form {
@@ -453,9 +449,3 @@ header {
         }
     }
 }
-
-/*@media screen and (min-width: 768px) {
-    body {
-        box-shadow: 0 0 5px $light-shadow;
-    }
-}*/
