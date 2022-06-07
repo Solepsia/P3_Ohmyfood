@@ -40,7 +40,7 @@
 }
 
 body {
-  max-width: 460px;
+  /*max-width: 768px;*/
   margin-left: auto;
   margin-right: auto;
   margin-top: 0px;
@@ -74,7 +74,6 @@ a {
   align-items: center;
   height: 100vh;
   width: 100%;
-  max-width: 460px;
   z-index: 1651541;
   position: fixed;
   animation: home-loading-background 2.5s;
@@ -86,7 +85,6 @@ a {
 
 header {
   height: 52px;
-  max-width: 460px;
   position: relative;
 }
 header .logo {
@@ -146,8 +144,12 @@ header .home {
   display: block;
   padding: 10px;
 }
+#top .search__form {
+  width: 132px;
+  margin: auto;
+}
 #top .search form {
-  width: 30%;
+  width: 100px;
 }
 #top .search ::placeholder {
   color: black;
@@ -160,18 +162,25 @@ header .home {
   color: black;
 }
 #top .pres {
+  margin: auto;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
   padding: 20px;
 }
 #top .pres__main {
-  margin: 10px;
+  margin: 10px auto 10px auto;
   font-size: 170%;
   font-weight: 700;
 }
 #top .pres__sub {
   font-size: 120%;
   font-weight: 300;
+}
+#top .pres__btn {
+  justify-content: center;
+  margin: 15px auto;
+  width: 250px;
 }
 
 .howto {
@@ -234,8 +243,8 @@ header .home {
   z-index: 1;
 }
 .places__card .fa-heart {
-  right: 10%;
-  bottom: 15%;
+  right: 25px;
+  bottom: 35px;
 }
 .places__card .fas {
   opacity: 0;
@@ -305,7 +314,9 @@ header .home {
   border-radius: 40px 40px 0px 0px;
   background-color: #f2f2f2;
   padding: 30px 15px;
-  margin: -50px 0px 0px 0px;
+  margin-top: -50px;
+  margin-left: auto;
+  margin-right: auto;
   flex-direction: column;
 }
 .menu__title {
@@ -445,10 +456,10 @@ header .home {
   width: 25px;
 }
 
-@media screen and (min-width: 460px) {
-  body {
-    box-shadow: 0 0 5px #c2c2c2;
-  }
-}
+/*@media screen and (min-width: 768px) {
+    body {
+        box-shadow: 0 0 5px $light-shadow;
+    }
+}*/
 
 /*# sourceMappingURL=style.css.map */

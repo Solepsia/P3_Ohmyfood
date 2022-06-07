@@ -70,7 +70,7 @@ $dark-shadow: #a2a2a2;
 }
 
 body {
-    max-width: 460px;
+    /*max-width: 768px;*/
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
@@ -104,7 +104,6 @@ a {
     align-items: center;
     height: 100vh;
     width: 100%;
-    max-width: 460px;
     z-index: 1651541;
     position: fixed;
     animation: home-loading-background 2.5s;
@@ -116,7 +115,6 @@ a {
 
 header {
     height: 52px;
-    max-width: 460px;
     position: relative;
     .logo {
         font-size: 150%;
@@ -174,8 +172,12 @@ header {
             display: block;
             padding: 10px;
         }
+        &__form {
+            width: 132px;
+            margin: auto;
+        }
         form {
-            width: 30%;
+            width: 100px;
         }
         ::placeholder {
             color: black;
@@ -189,17 +191,24 @@ header {
         }
     }
     .pres {
+        margin: auto;
+        flex-direction: column;
         justify-content: center;
         text-align: center;
         padding: 20px;
         &__main {
-            margin: 10px;
+            margin: 10px auto 10px auto;
             font-size: 170%;
             font-weight: 700;
         }
         &__sub {
             font-size: 120%;
             font-weight: 300;
+        }
+        &__btn {
+            justify-content: center;
+            margin: 15px auto;
+            width: 250px;
         }
     }
 }
@@ -262,8 +271,8 @@ header {
         position: relative;
         z-index: 1;
         .fa-heart {
-            right: 10%;
-            bottom: 15%;
+            right: 25px;
+            bottom: 35px;
         }
         @include heart-style;
     }
@@ -319,7 +328,9 @@ header {
     border-radius: 40px 40px 0px 0px;
     background-color: $bg-gray;
     padding: 30px 15px;
-    margin: -50px 0px 0px 0px;
+    margin-top: -50px;
+    margin-left: auto;
+    margin-right: auto;
     flex-direction: column;
     &__title {
         font-size: 150%;
@@ -443,8 +454,8 @@ header {
     }
 }
 
-@media screen and (min-width: 460px) {
+/*@media screen and (min-width: 768px) {
     body {
         box-shadow: 0 0 5px $light-shadow;
     }
-}
+}*/

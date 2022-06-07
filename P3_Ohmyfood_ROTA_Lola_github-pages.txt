@@ -1,1 +1,1 @@
-https://solepsia.github.io/P3_Ohmyfood/public/html/home.html
+https://solepsia.github.io/P3_Ohmyfood/public/html/index.html
